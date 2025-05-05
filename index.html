@@ -6,253 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 
   <title>Pantonny - A Arte de Transformar Pães em Negócio</title>
-  <style>
-    :root {
-      --primary: #ff8c00;
-      --bg: #fff8f0;
-      --text: #333;
-      --accent: #f06543;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      scroll-behavior: smooth;
-    }
-
-    header {
-      background-color: var(--primary);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 999;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      color: white;
-      font-size: 1.5rem;
-    }
-
-    nav {
-      display: flex;
-      gap: 1rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-    }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      left: 0;
-      bottom: -4px;
-      background: white;
-      transition: 0.3s;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .btn-email {
-      display: block;
-      background-color: var(--primary);
-      padding: 1rem 1.5rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      border-radius: 50px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s;
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-8px);
-        background-color: rgba(128, 0, 0, 0.446);
-        color: maroon;
-        box-shadow: none;
-      }
-
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    .toggle {
-      display: none;
-      flex-direction: column;
-      gap: 4px;
-      cursor: pointer;
-    }
-
-    .toggle div {
-      width: 25px;
-      height: 3px;
-      background: white;
-      border-radius: 3px;
-    }
-
-    .mobile-nav {
-      display: none;
-      flex-direction: column;
-      background: var(--primary);
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      border-radius: 8px;
-      overflow: hidden;
-      animation: fadeIn 0.3s ease forwards;
-    }
-
-    .mobile-nav.show {
-      display: flex;
-      animation: fadeIn 0.3s ease forwards;
-    }
-
-    .mobile-nav.hide {
-      animation: fadeIn 0.3s reverse ease;
-    }
-
-    .mobile-nav a {
-      color: white;
-      padding: 1rem;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      transition: background 0.3s;
-    }
-
-    .mobile-nav a:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    .hero {
-      margin-top: 0px;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .hero img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 16px;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: var(--accent);
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #444;
-    }
-
-    .btn-comprar {
-      display: block;
-      width: fit-content;
-      margin: 0 auto;
-      padding: 0.8rem 2rem;
-      font-size: 1.1rem;
-      font-weight: bold;
-      background-color: var(--accent);
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s ease;
-    }
-
-    .btn-comprar:hover {
-      background-color: #d75334;
-    }
-
-    section {
-      padding: 3rem 2rem;
-    }
-
-    #beneficios h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-      color: var(--primary);
-    }
-
-    #beneficios ul {
-      max-width: 800px;
-      margin: 0 auto;
-      list-style: none;
-    }
-
-    #beneficios li {
-      margin-bottom: 1.5rem;
-      font-size: 1.1rem;
-      background: white;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-
-      .toggle {
-        display: flex;
-      }
-    }
-  </style>
 </head>
 
 <body>
   <header>
-    <h1 data-aos="fade" data-aos-duration="1000" data-aos-delay="200">Pantonny</h1>
+    <h1 data-aos="fade" data-aos-duration="2000" data-aos-delay="200">Pantonny</h1>
     <div class="toggle" onclick="toggleMenu()">
       <div></div>
       <div></div>
@@ -261,21 +22,43 @@
     <nav>
       <a href="#beneficios">Benefícios</a>
       <a href="#depoimentos">Depoimentos</a>
-      <a href="#compra">Comprar</a>
+      <a href="#compra">Quero aprender a lucrar com pães</a>
     </nav>
     <div class="mobile-nav" id="mobileMenu">
       <a href="#beneficios" onclick="closeMenu()">Benefícios</a>
       <a href="#depoimentos" onclick="closeMenu()">Depoimentos</a>
-      <a href="#compra" onclick="closeMenu()">Comprar</a>
+      <a href="#compra" onclick="closeMenu()">Quero aprender a lucrar com pães</a>
     </div>
   </header>
 
   <section class="hero">
-    <img data-aos="fade" data-aos-duration="2000" data-aos-delay="200" src="capa-ebook.png"
+    <img data-aos="fade" data-aos-duration="2000" data-aos-delay="200" src="assets/image/business/capa-ebook.png"
       alt="Imagem de pão artesanal">
     <h2>Aprenda a faturar com pães artesanais – mesmo começando do zero</h2>
     <p>Método testado por centenas de alunos. Por tempo limitado!</p>
   </section>
+
+  <section id="preco"
+    style="background: #fff8ec; padding: 3rem 2rem; text-align: center; font-family: Arial, sans-serif;">
+    <div style="animation: fadeInUp 1s ease-out;">
+      <span style="font-size: 3rem; font-weight: bold; color: #e74c3c;">R$19,90</span>
+    </div>
+
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </section>
+
 
   <a href="#compra" class="btn-comprar">Quero aprender a lucrar com pães</a>
 
@@ -301,14 +84,14 @@
     </h3>
     <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
       <div style="flex: 1 1 300px; max-width: 500px;">
-        <img src="closeup-paes.png" alt="Pães saindo do forno"
+        <img src="assets/image/business/closeup-paes.png" alt="Pães saindo do forno"
           style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
         <p style="margin-top: 0.8rem; text-align: center; font-size: 1.1rem; color: #555;">
           A arte de assar pães perfeitos em casa.
         </p>
       </div>
       <div style="flex: 1 1 300px; max-width: 500px;">
-        <img src="pantonny-delivery.png" alt="Vendendo ou entregando pães"
+        <img src="assets/image/business/pantonny-delivery.png" alt="Vendendo ou entregando pães"
           style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
         <p style="margin-top: 0.8rem; text-align: center; font-size: 1.1rem; color: #555;">
           Transforme seu pão em uma fonte de renda.
@@ -326,25 +109,99 @@
       <!-- Depoimento 1 -->
       <div
         style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <figure>
-          <img src="pantonny-delivery.png" alt="">
-        </figure>
-        <p style="font-size: 1.1rem; color: #555;">"Esse eBook transformou minha abordagem com pães! Agora, além de
-          saber fazer os melhores pães, sei como vender e fidelizar meus clientes. Vale cada centavo!"</p>
-        <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Joana Oliveira</p>
-        <p style="font-size: 0.9rem; color: #888;">Empreendedora de Pães Artesanais</p>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <img src="assets/image/avatar/julian-wan-2EdIX-O2lkI-unsplash.jpg" alt="Avatar Joana Oliveira"
+            style="width: 50px; height: 50px; border-radius: 50%;">
+          <div>
+            <p style="font-size: 1.1rem; color: #555;">"Esse eBook transformou minha abordagem com pães! Agora, além de
+              saber fazer os melhores pães, sei como vender e fidelizar meus clientes. Vale cada centavo!"</p>
+            <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Joana Oliveira</p>
+            <p style="font-size: 0.9rem; color: #888;">Empreendedora de Pães Artesanais</p>
+          </div>
+        </div>
       </div>
 
       <!-- Depoimento 2 -->
       <div
         style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <p style="font-size: 1.1rem; color: #555;">"Aprendi tudo o que eu precisava para iniciar meu negócio de pães! Os
-          segredos de precificação e marketing são incríveis!"</p>
-        <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Carlos Mendes</p>
-        <p style="font-size: 0.9rem; color: #888;">Pequeno Empreendedor no Mercado Local</p>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <img src="assets/image/avatar/alex-suprun-ZHvM3XIOHoE-unsplash.jpg" alt="Avatar Carlos Mendes"
+            style="width: 50px; height: 50px; border-radius: 50%;">
+          <div>
+            <p style="font-size: 1.1rem; color: #555;">"Aprendi tudo o que eu precisava para iniciar meu negócio de
+              pães! Os
+              segredos de precificação e marketing são incríveis!"</p>
+            <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Carlos Mendes</p>
+            <p style="font-size: 0.9rem; color: #888;">Pequeno Empreendedor no Mercado Local</p>
+          </div>
+        </div>
       </div>
+
+      <!-- Depoimento 3 -->
+      <div
+        style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <img src="assets/image/avatar/alex-suprun-mynsNaNwVDc-unsplash.jpg" alt="Avatar Maria Souza"
+            style="width: 50px; height: 50px; border-radius: 50%;">
+          <div>
+            <p style="font-size: 1.1rem; color: #555;">"O conteúdo desse eBook é indispensável para quem quer crescer no
+              mercado de pães. Aprendi a vender de forma inteligente!"</p>
+            <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Maria Souza</p>
+            <p style="font-size: 0.9rem; color: #888;">Donos de Pequenos Negócios de Panificação</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 4 -->
+      <div
+        style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <img src="assets/image/avatar/nick-karvounis-z7rnWTZd2Qs-unsplash.jpg" alt="Avatar João Pereira"
+            style="width: 50px; height: 50px; border-radius: 50%;">
+          <div>
+            <p style="font-size: 1.1rem; color: #555;">"Nunca imaginei que entender de marketing ajudaria tanto no meu
+              negócio de pães. O eBook foi um divisor de águas!"</p>
+            <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">João Pereira</p>
+            <p style="font-size: 0.9rem; color: #888;">Empreendedor de Panificação</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 5 -->
+      <div
+        style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <img src="assets/image/avatar/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="Avatar Ana Costa"
+            style="width: 50px; height: 50px; border-radius: 50%;">
+          <div>
+            <p style="font-size: 1.1rem; color: #555;">"Esse eBook me deu a confiança para expandir meu negócio. Aprendi
+              a atrair mais clientes e a administrar melhor os custos!"</p>
+            <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Ana Costa</p>
+            <p style="font-size: 0.9rem; color: #888;">Proprietária de Panificadora</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 6 -->
+      <div
+        style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <img src="assets/image/avatar/steward-masweneng-oNcs1L6VJtM-unsplash.jpg" alt="Avatar Beatriz Lima"
+            style="width: 50px; height: 50px; border-radius: 50%;">
+          <div>
+            <p style="font-size: 1.1rem; color: #555;">"Simplesmente adorei! O conteúdo é claro, direto e cheio de dicas
+              que realmente funcionam. Comecei a vender mais já na primeira semana!"</p>
+            <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Beatriz Lima</p>
+            <p style="font-size: 0.9rem; color: #888;">Vendedora de Pães Caseiros</p>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+
   </section>
+
 
   <!-- Botões Flutuantes de CTA -->
   <div id="cta-buttons" style="position: fixed; right: 20px; bottom: 20px; z-index: 999;">
@@ -354,13 +211,9 @@
   </div>
 
   <!-- Footer (Rodapé) -->
-  <footer style="background-color: var(--primary); color: white; padding: 2rem 2rem; text-align: center;">
+  <footer
+    style="background-color: var(--primary); color: white; padding: 2rem 2rem; text-align: center; padding-bottom: 80px;">
     <p>&copy; 2025 Pantonny | Todos os direitos reservados</p>
-    <div style="margin-top: 1rem;">
-      <a href="https://facebook.com/pantonny" target="_blank" style="color: white; margin: 0 10px;">Facebook</a>
-      <a href="https://instagram.com/pantonny" target="_blank" style="color: white; margin: 0 10px;">Instagram</a>
-      <a href="https://twitter.com/pantonny" target="_blank" style="color: white; margin: 0 10px;">Twitter</a>
-    </div>
   </footer>
 
 
