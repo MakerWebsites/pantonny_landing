@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <title>Pantonny - A Arte de Transformar Pães em Negócio</title>
   <style>
     :root {
@@ -17,6 +21,10 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -36,7 +44,7 @@
       left: 0;
       right: 0;
       z-index: 999;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
@@ -69,6 +77,38 @@
 
     nav a:hover::after {
       width: 100%;
+    }
+
+    .btn-email {
+      display: block;
+      background-color: var(--primary);
+      padding: 1rem 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-radius: 50px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+        background-color: rgba(128, 0, 0, 0.446);
+        color: maroon;
+        box-shadow: none;
+      }
+
+      100% {
+        transform: translateY(0);
+      }
     }
 
     .toggle {
@@ -110,7 +150,7 @@
       color: white;
       padding: 1rem;
       text-decoration: none;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       transition: background 0.3s;
     }
 
@@ -119,12 +159,19 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
     .hero {
-      margin-top: 80px;
+      margin-top: 0px;
       padding: 2rem;
       text-align: center;
     }
@@ -148,8 +195,9 @@
     }
 
     .btn-comprar {
-      display: inline-block;
-      margin-top: 1.5rem;
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
       padding: 0.8rem 2rem;
       font-size: 1.1rem;
       font-weight: bold;
@@ -187,22 +235,24 @@
       background: white;
       padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     @media (max-width: 768px) {
       nav {
         display: none;
       }
+
       .toggle {
         display: flex;
       }
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Pantonny</h1>
+    <h1 data-aos="fade" data-aos-duration="1000" data-aos-delay="200">Pantonny</h1>
     <div class="toggle" onclick="toggleMenu()">
       <div></div>
       <div></div>
@@ -221,12 +271,18 @@
   </header>
 
   <section class="hero">
-    <img src="capa-ebook.png" alt="Imagem de pão artesanal">
-    <h2>A Arte de Transformar Pães em Negócio</h2>
-    <p>Descubra como transformar sua paixão por pães em uma fonte de renda com nosso eBook exclusivo.</p>
-    <a href="#compra" class="btn-comprar">Quero Começar Agora</a>
+    <img data-aos="fade" data-aos-duration="2000" data-aos-delay="200" src="capa-ebook.png"
+      alt="Imagem de pão artesanal">
+    <h2>Aprenda a faturar com pães artesanais – mesmo começando do zero</h2>
+    <p>Método testado por centenas de alunos. Por tempo limitado!</p>
   </section>
 
+  <a href="#compra" class="btn-comprar">Quero aprender a lucrar com pães</a>
+
+  <section style="text-align: center;line-height: 2rem; font-weight: bolder;">
+    <p>Você ama fazer pão, mas não sabe como vender?</p>
+    <p>Aprenda a precificar, divulgar e vender todos os dias!</p>
+  </section>
 
   <section id="beneficios">
     <h3>O que você vai aprender</h3>
@@ -245,13 +301,15 @@
     </h3>
     <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
       <div style="flex: 1 1 300px; max-width: 500px;">
-        <img src="closeup-paes.png" alt="Pães saindo do forno" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+        <img src="closeup-paes.png" alt="Pães saindo do forno"
+          style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
         <p style="margin-top: 0.8rem; text-align: center; font-size: 1.1rem; color: #555;">
           A arte de assar pães perfeitos em casa.
         </p>
       </div>
       <div style="flex: 1 1 300px; max-width: 500px;">
-        <img src="pantonny-delivery.png" alt="Vendendo ou entregando pães" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+        <img src="pantonny-delivery.png" alt="Vendendo ou entregando pães"
+          style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
         <p style="margin-top: 0.8rem; text-align: center; font-size: 1.1rem; color: #555;">
           Transforme seu pão em uma fonte de renda.
         </p>
@@ -260,48 +318,52 @@
   </section>
 
   <!-- Seção de Depoimentos -->
-<section id="depoimentos" style="background-color: #f5f5f5; padding: 3rem 2rem;">
-  <h3 style="text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 2rem;">
-    O que Nossos Clientes Dizem
-  </h3>
-  <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-    <!-- Depoimento 1 -->
-    <div style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-      <p style="font-size: 1.1rem; color: #555;">"Esse eBook transformou minha abordagem com pães! Agora, além de saber fazer os melhores pães, sei como vender e fidelizar meus clientes. Vale cada centavo!"</p>
-      <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Joana Oliveira</p>
-      <p style="font-size: 0.9rem; color: #888;">Empreendedora de Pães Artesanais</p>
+  <section id="depoimentos" style="background-color: #f5f5f5; padding: 3rem 2rem;">
+    <h3 style="text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 2rem;">
+      O que Nossos Clientes Dizem
+    </h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+      <!-- Depoimento 1 -->
+      <div
+        style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <figure>
+          <img src="pantonny-delivery.png" alt="">
+        </figure>
+        <p style="font-size: 1.1rem; color: #555;">"Esse eBook transformou minha abordagem com pães! Agora, além de
+          saber fazer os melhores pães, sei como vender e fidelizar meus clientes. Vale cada centavo!"</p>
+        <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Joana Oliveira</p>
+        <p style="font-size: 0.9rem; color: #888;">Empreendedora de Pães Artesanais</p>
+      </div>
+
+      <!-- Depoimento 2 -->
+      <div
+        style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <p style="font-size: 1.1rem; color: #555;">"Aprendi tudo o que eu precisava para iniciar meu negócio de pães! Os
+          segredos de precificação e marketing são incríveis!"</p>
+        <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Carlos Mendes</p>
+        <p style="font-size: 0.9rem; color: #888;">Pequeno Empreendedor no Mercado Local</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Depoimento 2 -->
-    <div style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-      <p style="font-size: 1.1rem; color: #555;">"Aprendi tudo o que eu precisava para iniciar meu negócio de pães! Os segredos de precificação e marketing são incríveis!"</p>
-      <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Carlos Mendes</p>
-      <p style="font-size: 0.9rem; color: #888;">Pequeno Empreendedor no Mercado Local</p>
+  <!-- Botões Flutuantes de CTA -->
+  <div id="cta-buttons" style="position: fixed; right: 20px; bottom: 20px; z-index: 999;">
+    <a class="btn-email" href="mailto:pantonnypaes@gmail.com">
+      Fale Conosco
+    </a>
+  </div>
+
+  <!-- Footer (Rodapé) -->
+  <footer style="background-color: var(--primary); color: white; padding: 2rem 2rem; text-align: center;">
+    <p>&copy; 2025 Pantonny | Todos os direitos reservados</p>
+    <div style="margin-top: 1rem;">
+      <a href="https://facebook.com/pantonny" target="_blank" style="color: white; margin: 0 10px;">Facebook</a>
+      <a href="https://instagram.com/pantonny" target="_blank" style="color: white; margin: 0 10px;">Instagram</a>
+      <a href="https://twitter.com/pantonny" target="_blank" style="color: white; margin: 0 10px;">Twitter</a>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- Botões Flutuantes de CTA -->
-<div id="cta-buttons" style="position: fixed; right: 20px; bottom: 20px; z-index: 999;">
-  <a href="#compra" style="display: block; margin-bottom: 10px; background-color: var(--accent); padding: 1rem 1.5rem; color: white; text-decoration: none; font-weight: bold; border-radius: 50px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: background-color 0.3s;">
-    Quero Comprar o eBook
-  </a>
-  <a href="mailto:contato@pantonny.com" style="display: block; background-color: var(--primary); padding: 1rem 1.5rem; color: white; text-decoration: none; font-weight: bold; border-radius: 50px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: background-color 0.3s;">
-    Fale Conosco
-  </a>
-</div>
 
-<!-- Footer (Rodapé) -->
-<footer style="background-color: var(--primary); color: white; padding: 2rem 2rem; text-align: center;">
-  <p>&copy; 2025 Pantonny | Todos os direitos reservados</p>
-  <div style="margin-top: 1rem;">
-    <a href="https://facebook.com/pantonny" target="_blank" style="color: white; margin: 0 10px;">Facebook</a>
-    <a href="https://instagram.com/pantonny" target="_blank" style="color: white; margin: 0 10px;">Instagram</a>
-    <a href="https://twitter.com/pantonny" target="_blank" style="color: white; margin: 0 10px;">Twitter</a>
-  </div>
-</footer>
-
-  
 
   <!-- Outras seções como Depoimentos, Compra, etc. -->
 
@@ -318,5 +380,12 @@
       setTimeout(() => menu.classList.remove('show'), 300);
     }
   </script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
+
 </html>
