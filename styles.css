@@ -164,14 +164,16 @@
   }
 
   .hero img {
-    max-width: 75%;
+    max-width: 60%;
     height: auto;
     border-radius: 16px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 3.5rem;
   }
 
   .hero h2 {
-    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--accent);
   }
@@ -234,3 +236,93 @@
       display: flex;
     }
   }
+
+  
+  .ebook-section {
+    background-color: #fffefc;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
+  
+  .ebook-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .ebook-title {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #2e2e2e;
+  }
+  
+  .ebook-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #6c6c6c;
+  }
+  
+  .ebook-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .ebook-card {
+    background: #fff;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    padding: 25px;
+    max-width: 400px;
+    flex: 1 1 300px;
+    text-align: left;
+    transition: transform 0.2s ease;
+  }
+  
+  .ebook-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .ebook-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .ebook-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .ebook-bonus {
+    margin-top: 50px;
+    background: #fff3e6;
+    padding: 25px;
+    border-radius: 10px;
+  }
+  
+  .ebook-bonus p {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .ebook-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #ff6600;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .ebook-btn:hover {
+    background: #cc5200;
+  }
+  
