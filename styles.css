@@ -326,3 +326,13 @@
     background: #cc5200;
   }
   
+  .selos-seguranca {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .selos-seguranca img {
+    max-width: 100%;
+    height: auto;
+  }
+  
