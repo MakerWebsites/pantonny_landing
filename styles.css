@@ -336,3 +336,20 @@
     height: auto;
   }
   
+
+  .countdown-box {
+  background-color: #fff3e6;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 30px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#countdown {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e67e22;
+  margin-top: 10px;
+}
+

@@ -36,15 +36,24 @@
     <div class="mobile-nav" id="mobileMenu">
       <a href="#beneficios" onclick="closeMenu()">Benefícios</a>
       <a href="#depoimentos" onclick="closeMenu()">Depoimentos</a>
-      <a href="#checkout" onclick="closeMenu()">Lucrar com pães agora mesmo!</a>
+      <a href="https://pay.hotmart.com/E99814071Y" onclick="closeMenu()">Lucrar com pães agora mesmo!</a>
     </div>
   </header>
 
   <section class="hero">
-    <img src="assets/image/business/capa-ebook.png" loading="lazy" alt="Imagem de pão artesanal">
+    <img src="assets/image/business/capa-ebook.png" alt="Imagem de pão artesanal">
     <h2>Aprenda a faturar com pães artesanais – mesmo começando do zero</h2>
     <p>Método testado por centenas de alunos. Por tempo limitado!</p>
   </section>
+
+          <div class="countdown-box">
+  <p><strong>Oferta válida por:</strong></p>
+  <div id="countdown">
+    <span id="hours">12</span>h :
+    <span id="minutes">00</span>m :
+    <span id="seconds">00</span>s
+  </div>
+</div>
 
   <a href="#checkout" class="btn-comprar">Quero aprender a lucrar com pães</a>
 
@@ -63,6 +72,8 @@
       <li>Acesso a conteúdos práticos e diretos, sem enrolação.</li>
     </ul>
   </section>
+
+  
 
   <section id="receitas-exclusivas" class="ebook-section">
     <div class="ebook-container">
@@ -108,7 +119,7 @@
     </h3>
     <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
       <div style="flex: 1 1 300px; max-width: 500px;">
-        <img src="assets/image/business/pantonny-delivery.png" loading="lazy" alt="Vendendo ou entregando pães"
+        <img src="assets/image/business/pantonny-delivery.png" alt="Vendendo ou entregando pães"
           style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
         <p style="margin-top: 0.8rem; text-align: center; font-size: 1.1rem; color: #555;">
           Transforme seu pão em uma fonte de renda.
@@ -127,7 +138,7 @@
       <div
         style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
         <div style="display: flex; align-items: center; gap: 1rem;">
-          <img src="assets/image/avatar/julian-wan-2EdIX-O2lkI-unsplash.jpg" loading="lazy" alt="Avatar Joana Oliveira"
+          <img src="assets/image/avatar/julian-wan-2EdIX-O2lkI-unsplash.jpg" alt="Avatar Joana Oliveira"
             style="width: 50px; height: 50px; border-radius: 50%;">
           <div>
             <p style="font-size: 1.1rem; color: #555;">"Esse eBook transformou minha abordagem com pães! Agora, além de
@@ -520,7 +531,58 @@
       menu.classList.add('hide');
       setTimeout(() => menu.classList.remove('show'), 300);
     }
+
   </script>
+
+  <script>
+  function startCountdown(durationHours) {
+    const countdownElement = document.getElementById("countdown");
+    const hoursSpan = document.getElementById("hours");
+    const minutesSpan = document.getElementById("minutes");
+    const secondsSpan = document.getElementById("seconds");
+
+    const savedEndTime = localStorage.getItem("bonusCountdownEnd");
+    let endTime;
+
+    if (savedEndTime) {
+      endTime = new Date(savedEndTime);
+    } else {
+      endTime = new Date();
+      endTime.setHours(endTime.getHours() + durationHours);
+      localStorage.setItem("bonusCountdownEnd", endTime);
+    }
+
+    function updateCountdown() {
+      const now = new Date();
+      const distance = endTime - now;
+
+      if (distance <= 0) {
+        hoursSpan.textContent = "00";
+        minutesSpan.textContent = "00";
+        secondsSpan.textContent = "00";
+        return;
+      }
+
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
+
+      hoursSpan.textContent = String(hours).padStart(2, "0");
+      minutesSpan.textContent = String(minutes).padStart(2, "0");
+      secondsSpan.textContent = String(seconds).padStart(2, "0");
+
+      requestAnimationFrame(updateCountdown);
+    }
+
+    updateCountdown();
+  }
+
+  // Iniciar o contador com 12 horas
+  window.addEventListener("DOMContentLoaded", () => {
+    startCountdown(12);
+  });
+</script>
+
 
 </body>
 
