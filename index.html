@@ -3,14 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta http-equiv="Cache-Control" content="max-age=31536000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Preload fontes, CSS ou imagens críticas -->
+  <link rel="preload" href="/fonts/minhafonte.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="preload" href="script.js" as="script" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="script.js" defer></script>
+
+
   <link rel="stylesheet" href="styles.css">
 
   <title>Pantonny - A Arte de Transformar Pães em Negócio</title>
 </head>
-<!-- www.pantonny.com.br/ebooks/ebook_001/index.html -->
 
 <body>
   <header>
@@ -23,17 +31,17 @@
     <nav>
       <a href="#beneficios">Benefícios</a>
       <a href="#depoimentos">Depoimentos</a>
-      <a href="#checkout">Quero aprender a lucrar com pães</a>
+      <a href="#checkout">Lucrar com pães agora mesmo!</a>
     </nav>
     <div class="mobile-nav" id="mobileMenu">
       <a href="#beneficios" onclick="closeMenu()">Benefícios</a>
       <a href="#depoimentos" onclick="closeMenu()">Depoimentos</a>
-      <a href="#checkout" onclick="closeMenu()">Quero aprender a lucrar com pães</a>
+      <a href="#checkout" onclick="closeMenu()">Lucrar com pães agora mesmo!</a>
     </div>
   </header>
 
   <section class="hero">
-    <img src="assets/image/business/capa-ebook.png" alt="Imagem de pão artesanal">
+    <img src="assets/image/business/capa-ebook.png" loading="lazy" alt="Imagem de pão artesanal">
     <h2>Aprenda a faturar com pães artesanais – mesmo começando do zero</h2>
     <p>Método testado por centenas de alunos. Por tempo limitado!</p>
   </section>
@@ -88,7 +96,7 @@
       <div class="ebook-bonus">
         <p><strong>Exclusivo:</strong> Cada receita vem com <strong>ingredientes, modo de preparo, tempo, custo,
             rendimento e valor de venda sugerido</strong>.</p>
-        <a href="checkout" class="ebook-btn">Quero Acessar as Receitas</a>
+        <a href="#checkout" class="ebook-btn">Quero Acessar as Receitas</a>
       </div>
     </div>
   </section>
@@ -100,14 +108,7 @@
     </h3>
     <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
       <div style="flex: 1 1 300px; max-width: 500px;">
-        <img src="assets/image/business/closeup-paes.png" alt="Pães saindo do forno"
-          style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
-        <p style="margin-top: 0.8rem; text-align: center; font-size: 1.1rem; color: #555;">
-          A arte de assar pães perfeitos em casa.
-        </p>
-      </div>
-      <div style="flex: 1 1 300px; max-width: 500px;">
-        <img src="assets/image/business/pantonny-delivery.png" alt="Vendendo ou entregando pães"
+        <img src="assets/image/business/pantonny-delivery.png" loading="lazy" alt="Vendendo ou entregando pães"
           style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
         <p style="margin-top: 0.8rem; text-align: center; font-size: 1.1rem; color: #555;">
           Transforme seu pão em uma fonte de renda.
@@ -126,7 +127,7 @@
       <div
         style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
         <div style="display: flex; align-items: center; gap: 1rem;">
-          <img src="assets/image/avatar/julian-wan-2EdIX-O2lkI-unsplash.jpg" alt="Avatar Joana Oliveira"
+          <img src="assets/image/avatar/julian-wan-2EdIX-O2lkI-unsplash.jpg" loading="lazy" alt="Avatar Joana Oliveira"
             style="width: 50px; height: 50px; border-radius: 50%;">
           <div>
             <p style="font-size: 1.1rem; color: #555;">"Esse eBook transformou minha abordagem com pães! Agora, além de
@@ -136,8 +137,8 @@
           </div>
         </div>
         <div>
-          <img src="assets/image/business/WhatsApp Image 2024-07-08 at 14.45.02 (3).jpeg" alt="Avatar Joana Oliveira"
-            style="width: 100%; border-radius: 20px; padding-top: 1rem;">
+          <img src="assets/image/business/WhatsApp Image 2024-07-08 at 14.45.02 (3).jpeg" loading="lazy"
+            alt="Avatar Joana Oliveira" style="width: 100%; border-radius: 20px; padding-top: 1rem;">
         </div>
       </div>
 
@@ -145,7 +146,7 @@
       <div
         style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
         <div style="display: flex; align-items: center; gap: 1rem;">
-          <img src="assets/image/avatar/alex-suprun-ZHvM3XIOHoE-unsplash.jpg" alt="Avatar Carlos Mendes"
+          <img src="assets/image/avatar/alex-suprun-ZHvM3XIOHoE-unsplash.jpg" loading="lazy" alt="Avatar Carlos Mendes"
             style="width: 50px; height: 50px; border-radius: 50%;">
           <div>
             <p style="font-size: 1.1rem; color: #555;">"Aprendi tudo o que eu precisava para iniciar meu negócio de
@@ -156,9 +157,9 @@
           </div>
         </div>
         <div>
-          <img src="assets/image/business/paonatural.jpg" alt="Avatar Joana Oliveira"
+          <img src="assets/image/business/paonatural.jpg" loading="lazy" alt="Avatar Joana Oliveira"
             style="width: 100%; border-radius: 20px; padding-top: 1rem;">
-          <img src="assets/image/business/paonatural2.jpg" alt="Avatar Joana Oliveira"
+          <img src="assets/image/business/paonatural2.jpg" loading="lazy" alt="Avatar Joana Oliveira"
             style="width: 100%; border-radius: 20px; padding-top: 1rem;">
         </div>
       </div>
@@ -167,7 +168,7 @@
       <div
         style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
         <div style="display: flex; align-items: center; gap: 1rem;">
-          <img src="assets/image/avatar/alex-suprun-mynsNaNwVDc-unsplash.jpg" alt="Avatar Maria Souza"
+          <img src="assets/image/avatar/alex-suprun-mynsNaNwVDc-unsplash.jpg" loading="lazy" alt="Avatar Maria Souza"
             style="width: 50px; height: 50px; border-radius: 50%;">
           <div>
             <p style="font-size: 1.1rem; color: #555;">"O conteúdo desse eBook é indispensável para quem quer crescer no
@@ -177,31 +178,18 @@
           </div>
         </div>
         <div>
-          <img src="assets/image/business/paorecheadorequeijao.jpg" alt="Avatar Joana Oliveira"
+          <img src="assets/image/business/paorecheadorequeijao.jpg" loading="lazy" alt="Avatar Joana Oliveira"
             style="width: 100%; border-radius: 20px; padding-top: 1rem;">
         </div>
       </div>
 
       <!-- Depoimento 4 -->
-      <div
-        style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <div style="display: flex; align-items: center; gap: 1rem;">
-          <img src="assets/image/avatar/nick-karvounis-z7rnWTZd2Qs-unsplash.jpg" alt="Avatar João Pereira"
-            style="width: 50px; height: 50px; border-radius: 50%;">
-          <div>
-            <p style="font-size: 1.1rem; color: #555;">"Nunca imaginei que entender de marketing ajudaria tanto no meu
-              negócio de pães. O eBook foi um divisor de águas!"</p>
-            <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">João Pereira</p>
-            <p style="font-size: 0.9rem; color: #888;">Empreendedor de Panificação</p>
-          </div>
-        </div>
-      </div>
 
       <!-- Depoimento 5 -->
       <div
         style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
         <div style="display: flex; align-items: center; gap: 1rem;">
-          <img src="assets/image/avatar/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="Avatar Ana Costa"
+          <img src="assets/image/avatar/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" loading="lazy" alt="Avatar Ana Costa"
             style="width: 50px; height: 50px; border-radius: 50%;">
           <div>
             <p style="font-size: 1.1rem; color: #555;">"Esse eBook me deu a confiança para expandir meu negócio. Aprendi
@@ -216,8 +204,8 @@
       <div
         style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
         <div style="display: flex; align-items: center; gap: 1rem;">
-          <img src="assets/image/avatar/steward-masweneng-oNcs1L6VJtM-unsplash.jpg" alt="Avatar Beatriz Lima"
-            style="width: 50px; height: 50px; border-radius: 50%;">
+          <img src="assets/image/avatar/steward-masweneng-oNcs1L6VJtM-unsplash.jpg" loading="lazy"
+            alt="Avatar Beatriz Lima" style="width: 50px; height: 50px; border-radius: 50%;">
           <div>
             <p style="font-size: 1.1rem; color: #555;">"Simplesmente adorei! O conteúdo é claro, direto e cheio de dicas
               que realmente funcionam. Comecei a vender mais já na primeira semana!"</p>
@@ -233,37 +221,106 @@
   </section>
 
   <section class="selos-seguranca">
-    <img src="assets/image/business/compra-segura.png" usemap="#mapa-selos" alt="Selos de Segurança" width="600" />
-  
+    <img src="assets/image/business/compra-segura.png" loading="lazy" usemap="#mapa-selos" alt="Selos de Segurança"
+      width="600" />
+
     <map name="mapa-selos">
       <!-- Selo 1: Compra Segura -->
-      <area shape="rect" coords="0,0,200,200" href="https://www.certificadodigital.com.br" target="_blank" alt="Compra Segura">
-      
+      <area shape="rect" coords="0,0,200,200" href="https://www.certificadodigital.com.br" target="_blank"
+        alt="Compra Segura">
+
       <!-- Selo 2: Site Protegido -->
-      <area shape="rect" coords="200,0,400,200" href="https://transparencyreport.google.com/safe-browsing/search" target="_blank" alt="Site Protegido">
-  
+      <area shape="rect" coords="200,0,400,200" href="https://transparencyreport.google.com/safe-browsing/search"
+        target="_blank" alt="Site Protegido">
+
       <!-- Selo 3: Transação Segura -->
       <area shape="rect" coords="400,0,600,200" href="https://www.ssl.com/" target="_blank" alt="Transação Segura">
     </map>
   </section>
-  
+
   <section id="preco"
-  style="background: #fff8ec; padding: 3rem 2rem; text-align: center; font-family: Arial, sans-serif;">
-  <div style="animation: fadeInUp 1s ease-out;">
-    <span style="font-size: 3rem; font-weight: bold; color: #e74c3c;">R$39,90<sup
-        style="font-size: 1.5rem; padding: 0.5rem; color: rgb(21, 255, 0);"><del>R$57,99</del></sup></span>
-  </div>
+    style="background: #fff8ec; padding: 3rem 2rem; text-align: center; font-family: Arial, sans-serif;">
+    <div style="animation: fadeInUp 1s ease-out;">
+      <span style="font-size: 3rem; font-weight: bold; color: #e74c3c;">R$39,90<sup
+          style="font-size: 1.5rem; padding: 0.5rem; color: rgb(21, 255, 0);"><del>R$57,99</del></sup></span>
+    </div>
 
-  <div>
-    <p>Não perca a chance de lucrar com pães, compre agora mesmo.</p>
-    <a href="https://mpago.la/11oM4Cz" class="ebook-btn" id="checkout">Quero aprender hoje mesmo!</a>
-  </div>
+    <div>
+      <p>Não perca a chance de lucrar com pães, compre agora mesmo.</p>
+      <a href="https://pay.hotmart.com/E99814071Y" class="ebook-btn" id="checkout">Lucrar com pães agora mesmo!</a>
+    </div>
 
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </section>
+
+
+
+  <!-- Botões Flutuantes de CTA -->
+  <!-- FAQ Flutuante - Estilo Pantonny -->
   <style>
-    @keyframes fadeInUp {
+    :root {
+      --roxo: #ff6600;
+      --claro: #f9f4fc;
+      --texto: #333;
+      --branco: #ffffff;
+      --verde: #25D366;
+    }
+
+    #faq-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--roxo);
+      color: var(--branco);
+      border: none;
+      border-radius: 30px;
+      padding: 14px 20px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      z-index: 9999;
+      transition: all 0.3s ease;
+    }
+
+    #faq-button:hover {
+      transform: scale(1.05);
+      background: #e65c00;
+    }
+
+    #faq-box {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 320px;
+      max-height: 80vh;
+      overflow-y: auto;
+      background: var(--branco);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      display: none;
+      z-index: 9998;
+      animation: slideUp 0.4s ease forwards;
+    }
+
+    @keyframes slideUp {
       from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
       }
 
       to {
@@ -271,20 +328,158 @@
         transform: translateY(0);
       }
     }
+
+    .faq-item {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      color: var(--roxo);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .faq-question:hover {
+      color: #d95700;
+    }
+
+    .faq-answer {
+      display: none;
+      font-size: 14px;
+      color: var(--texto);
+      margin-top: 5px;
+      line-height: 1.5;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    a.whatsapp-btn {
+      display: inline-block;
+      background: var(--verde);
+      color: var(--branco);
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
+
+    a.whatsapp-btn:hover {
+      background: #1ebe5d;
+    }
+
+    @media screen and (max-width: 480px) {
+      #faq-box {
+        width: 90%;
+        right: 5%;
+        bottom: 90px;
+      }
+
+      #faq-button {
+        font-size: 14px;
+        padding: 12px 16px;
+      }
+    }
   </style>
-</section>
 
+  <!-- Botão Flutuante -->
+  <button id="faq-button">Dúvidas Frequentes</button>
 
-
-  <!-- Botões Flutuantes de CTA -->
-  <div id="cta-buttons" style="position: fixed; right: 20px; bottom: 20px; z-index: 999;">
-    <a class="btn-email" href="mailto:pantonnypaes@gmail.com">
-      Fale Conosco
-    </a>
+  <!-- Caixa de FAQ -->
+  <div id="faq-box">
+    <div class="faq-item">
+      <div class="faq-question">📘 O que tem no eBook?</div>
+      <div class="faq-answer">O eBook contém receitas práticas e dicas para você aprender a fazer e vender pães
+        caseiros.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">👶 É indicado para iniciantes?</div>
+      <div class="faq-answer">Sim! Todo o conteúdo foi pensado para quem nunca trabalhou com panificação antes.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">📩 Como vou receber o eBook?</div>
+      <div class="faq-answer">Assim que o pagamento for confirmado, você receberá o link de download direto no seu
+        e-mail e WhatsApp.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">💸 Posso começar a vender com esse conteúdo?</div>
+      <div class="faq-answer">Com certeza! O material inclui orientações práticas para começar a vender ainda essa
+        semana.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">⏳ O conteúdo tem validade?</div>
+      <div class="faq-answer">Não! Você poderá acessar o eBook sempre que quiser, sem prazo de expiração.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">💬 Ainda com dúvidas?</div>
+      <div class="faq-answer">
+        Fale diretamente com nosso time pelo WhatsApp e tire todas as suas dúvidas agora mesmo.<br><br>
+        <a href="https://wa.me/5511968559541?text=Olá!%20Gostaria%20de%20tirar%20algumas%20dúvidas%20sobre%20o%20eBook."
+          class="whatsapp-btn" target="_blank">
+          👉 Falar via WhatsApp
+        </a>
+      </div>
+    </div>
   </div>
 
+  <!-- Script de interatividade -->
+  <script>
+    const faqButton = document.getElementById('faq-button');
+    const faqBox = document.getElementById('faq-box');
+    const questions = document.querySelectorAll('.faq-question');
+
+    faqButton.addEventListener('click', () => {
+      faqBox.style.display = faqBox.style.display === 'block' ? 'none' : 'block';
+    });
+
+    questions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+          answer.style.display = 'block';
+        }
+      });
+    });
+  </script>
+
+
+  <!-- JavaScript da FAQ -->
+  <script>
+    const faqBtn = document.getElementById('faq-button');
+    const faqBox = document.getElementById('faq-box');
+    const questions = document.querySelectorAll('.faq-question');
+
+    faqBtn.addEventListener('click', () => {
+      faqBox.style.display = faqBox.style.display === 'block' ? 'none' : 'block';
+    });
+
+    questions.forEach((question) => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+
+
   <!-- Footer (Rodapé) -->
-  <footer style="background-color: #ff7700; color: #fff; padding: 40px 0;">
+  <footer style="background-color: #ff7700; color: #fff; padding: 80px 0;">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
       <div style="flex: 1; min-width: 200px; margin: 10px;">
         <h4 style="margin-bottom: 15px;">Pantonny</h4>
@@ -300,16 +495,16 @@
       <div style="flex: 1; min-width: 200px; margin: 10px;">
         <h4 style="margin-bottom: 15px;">Contato</h4>
         <a style="color: #fff; text-decoration: none;" href="mailto:pantonnypaes@gmail.com">contato@pantonny.com.br</a>
-        <p>WhatsApp: (11) 96855-9541</p>
+        <a style="text-decoration: none; color: white; text-transform: uppercase; font-weight: bold;"
+          href="https://wa.me/5511968559541?text=Olá!%20Gostaria%20de%20tirar%20algumas%20dúvidas%20sobre%20o%20eBook.">
+          <p>Entrar em contato via WhatsApp</p>
+        </a>
       </div>
     </div>
     <div style="text-align: center; margin-top: 30px; font-size: 14px;">
       © 2025 Pantonny | Todos os direitos reservados
     </div>
   </footer>
-
-
-
 
   <!-- Outras seções como Depoimentos, Compra, etc. -->
 
@@ -325,11 +520,6 @@
       menu.classList.add('hide');
       setTimeout(() => menu.classList.remove('show'), 300);
     }
-  </script>
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
   </script>
 
 </body>
