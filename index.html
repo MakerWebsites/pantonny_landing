@@ -1,599 +1,118 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="Cache-Control" content="max-age=31536000" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Preload fontes, CSS ou imagens críticas -->
-  <link rel="preload" href="/fonts/minhafonte.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-  <link rel="preload" href="styles.css" as="style" />
-  <link rel="preload" href="script.js" as="script" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11418191819">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-11418191819');
-</script>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script src="script.js" defer></script>
-
-
-  <link rel="stylesheet" href="styles.css">
-
-  <title>Pantonny - A Arte de Transformar Pães em Negócio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantonny Assinatura de Pães</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <h1>Pantonny</h1>
-    <div class="toggle" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <nav>
-      <a href="#beneficios">Benefícios</a>
-      <a href="#depoimentos">Depoimentos</a>
-      <a href="#checkout">Lucrar com pães agora mesmo!</a>
-    </nav>
-    <div class="mobile-nav" id="mobileMenu">
-      <a href="#beneficios" onclick="closeMenu()">Benefícios</a>
-      <a href="#depoimentos" onclick="closeMenu()">Depoimentos</a>
-      <a href="https://pay.hotmart.com/E99814071Y" onclick="closeMenu()">Lucrar com pães agora mesmo!</a>
-    </div>
-  </header>
-
-  <section class="hero">
-    <img src="assets/image/business/capa-ebook.png" alt="Imagem de pão artesanal">
-    <h2>Aprenda a faturar com pães artesanais – mesmo começando do zero</h2>
-    <p>Método testado por centenas de alunos. Por tempo limitado!</p>
-  </section>
-
-          <div class="countdown-box">
-  <p><strong>Oferta válida por:</strong></p>
-  <div id="countdown">
-    <span id="hours">12</span>h :
-    <span id="minutes">00</span>m :
-    <span id="seconds">00</span>s
-  </div>
-</div>
-
-  <a href="#checkout" class="btn-comprar">Quero aprender a lucrar com pães</a>
-
-  <section style="text-align: center;line-height: 2rem; font-weight: bolder;">
-    <p>Você ama fazer pão, mas não sabe como vender?</p>
-    <p>Aprenda a precificar, divulgar e vender todos os dias!</p>
-  </section>
-
-  <section id="beneficios">
-    <h3>O que você vai aprender</h3>
-    <ul>
-      <li>Como fazer pães artesanais incríveis com ingredientes simples.</li>
-      <li>Estratégias para vender seus pães e lucrar mesmo em casa.</li>
-      <li>Dicas de precificação, embalagem e apresentação.</li>
-      <li>Como atrair seus primeiros clientes e fidelizar compradores.</li>
-      <li>Acesso a conteúdos práticos e diretos, sem enrolação.</li>
-    </ul>
-  </section>
-
-  
-
-  <section id="receitas-exclusivas" class="ebook-section">
-    <div class="ebook-container">
-      <h2 class="ebook-title">📖 30 Receitas Exclusivas do eBook</h2>
-      <p class="ebook-subtitle">
-        Testadas, aprovadas e pensadas para transformar sua produção artesanal em renda real.
-      </p>
-
-      <div class="ebook-grid">
-        <div class="ebook-card">
-          <h3>✅ Pães Artesanais Clássicos</h3>
-          <p>Pão branco, francês, caseiro, de leite, e fermentação natural com levain.</p>
+    <header>
+        <div class="header-content">
+            <h1>PANTONNY</h1>
+            <p>Entregas nos dias de culto: <strong>terça, quinta e domingo</strong></p>
+            <p>A cada pão vendido R$ 2,00 serão covertidos para a oferta na igreja.</p>
         </div>
-
-        <div class="ebook-card">
-          <h3>🍯 Pães Doces e Recheados</h3>
-          <p>Pão de chocolate, coco, banana, leite condensado, abacaxi, mel e muito mais.</p>
-        </div>
-
-        <div class="ebook-card">
-          <h3>🌾 Integrais e Funcionais</h3>
-          <p>Pães com aveia, centeio, linhaça, chia, batata-doce, sementes e abóbora.</p>
-        </div>
-
-        <div class="ebook-card">
-          <h3>🧀 Gourmet e Salgados</h3>
-          <p>Pão de alho, queijo, azeitona, cheddar, tomate seco, cará, e até pão de cerveja!</p>
-        </div>
-      </div>
-
-      <div class="ebook-bonus">
-        <p><strong>Exclusivo:</strong> Cada receita vem com <strong>ingredientes, modo de preparo, tempo, custo,
-            rendimento e valor de venda sugerido</strong>.</p>
-        <a href="#checkout" class="ebook-btn">Quero Acessar as Receitas</a>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="do-forno-ao-cliente" style="padding: 3rem 2rem; background-color: #fff3e6;">
-    <h3 style="text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 2rem;">
-      Do Forno ao Cliente
-    </h3>
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-      <div style="flex: 1 1 300px; max-width: 500px;">
-        <img src="assets/image/business/pantonny-delivery.png" alt="Vendendo ou entregando pães"
-          style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
-        <p style="margin-top: 0.8rem; text-align: center; font-size: 1.1rem; color: #555;">
-          Transforme seu pão em uma fonte de renda.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção de Depoimentos -->
-  <section id="depoimentos" style="background-color: #f5f5f5; padding: 3rem 2rem;">
-    <h3 style="text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 2rem;">
-      O que Nossos Clientes Dizem
-    </h3>
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-      <!-- Depoimento 1 -->
-      <div
-        style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <div style="display: flex; align-items: center; gap: 1rem;">
-          <img src="assets/image/avatar/julian-wan-2EdIX-O2lkI-unsplash.jpg" alt="Avatar Joana Oliveira"
-            style="width: 50px; height: 50px; border-radius: 50%;">
-          <div>
-            <p style="font-size: 1.1rem; color: #555;">"Esse eBook transformou minha abordagem com pães! Agora, além de
-              saber fazer os melhores pães, sei como vender e fidelizar meus clientes. Vale cada centavo!"</p>
-            <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Joana Oliveira</p>
-            <p style="font-size: 0.9rem; color: #888;">Empreendedora de Pães Artesanais</p>
-          </div>
-        </div>
-        <div>
-          <img src="assets/image/business/WhatsApp Image 2024-07-08 at 14.45.02 (3).jpeg" loading="lazy"
-            alt="Avatar Joana Oliveira" style="width: 100%; border-radius: 20px; padding-top: 1rem;">
-        </div>
-      </div>
-
-      <!-- Depoimento 2 -->
-      <div
-        style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <div style="display: flex; align-items: center; gap: 1rem;">
-          <img src="assets/image/avatar/alex-suprun-ZHvM3XIOHoE-unsplash.jpg" loading="lazy" alt="Avatar Carlos Mendes"
-            style="width: 50px; height: 50px; border-radius: 50%;">
-          <div>
-            <p style="font-size: 1.1rem; color: #555;">"Aprendi tudo o que eu precisava para iniciar meu negócio de
-              pães! Os
-              segredos de precificação e marketing são incríveis!"</p>
-            <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Carlos Mendes</p>
-            <p style="font-size: 0.9rem; color: #888;">Pequeno Empreendedor no Mercado Local</p>
-          </div>
-        </div>
-        <div>
-          <img src="assets/image/business/paonatural.jpg" loading="lazy" alt="Avatar Joana Oliveira"
-            style="width: 100%; border-radius: 20px; padding-top: 1rem;">
-          <img src="assets/image/business/paonatural2.jpg" loading="lazy" alt="Avatar Joana Oliveira"
-            style="width: 100%; border-radius: 20px; padding-top: 1rem;">
-        </div>
-      </div>
-
-      <!-- Depoimento 3 -->
-      <div
-        style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <div style="display: flex; align-items: center; gap: 1rem;">
-          <img src="assets/image/avatar/alex-suprun-mynsNaNwVDc-unsplash.jpg" loading="lazy" alt="Avatar Maria Souza"
-            style="width: 50px; height: 50px; border-radius: 50%;">
-          <div>
-            <p style="font-size: 1.1rem; color: #555;">"O conteúdo desse eBook é indispensável para quem quer crescer no
-              mercado de pães. Aprendi a vender de forma inteligente!"</p>
-            <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Maria Souza</p>
-            <p style="font-size: 0.9rem; color: #888;">Apaixonada por panificação</p>
-          </div>
-        </div>
-        <div>
-          <img src="assets/image/business/paorecheadorequeijao.jpg" loading="lazy" alt="Avatar Joana Oliveira"
-            style="width: 100%; border-radius: 20px; padding-top: 1rem;">
-        </div>
-      </div>
-
-      <!-- Depoimento 4 -->
-
-      <!-- Depoimento 5 -->
-      <div
-        style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <div style="display: flex; align-items: center; gap: 1rem;">
-          <img src="assets/image/avatar/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" loading="lazy" alt="Avatar Ana Costa"
-            style="width: 50px; height: 50px; border-radius: 50%;">
-          <div>
-            <p style="font-size: 1.1rem; color: #555;">"Esse eBook me deu a confiança para expandir meu negócio. Aprendi
-              a atrair mais clientes e a administrar melhor os custos!"</p>
-            <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Ana Costa</p>
-            <p style="font-size: 0.9rem; color: #888;">Proprietária de Panificadora</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Depoimento 6 -->
-      <div
-        style="flex: 1 1 300px; max-width: 400px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <div style="display: flex; align-items: center; gap: 1rem;">
-          <img src="assets/image/avatar/steward-masweneng-oNcs1L6VJtM-unsplash.jpg" loading="lazy"
-            alt="Avatar Beatriz Lima" style="width: 50px; height: 50px; border-radius: 50%;">
-          <div>
-            <p style="font-size: 1.1rem; color: #555;">"Simplesmente adorei! O conteúdo é claro, direto e cheio de dicas
-              que realmente funcionam. Comecei a vender mais já na primeira semana!"</p>
-            <p style="font-weight: bold; color: var(--primary); margin-top: 1rem;">Beatriz Lima</p>
-            <p style="font-size: 0.9rem; color: #888;">Vendedora de Pães Caseiros</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-  </section>
-
-  <section class="selos-seguranca">
-    <img src="assets/image/business/compra-segura.png" loading="lazy" usemap="#mapa-selos" alt="Selos de Segurança"
-      width="600" />
-
-    <map name="mapa-selos">
-      <!-- Selo 1: Compra Segura -->
-      <area shape="rect" coords="0,0,200,200" href="https://www.certificadodigital.com.br" target="_blank"
-        alt="Compra Segura">
-
-      <!-- Selo 2: Site Protegido -->
-      <area shape="rect" coords="200,0,400,200" href="https://transparencyreport.google.com/safe-browsing/search"
-        target="_blank" alt="Site Protegido">
-
-      <!-- Selo 3: Transação Segura -->
-      <area shape="rect" coords="400,0,600,200" href="https://www.ssl.com/" target="_blank" alt="Transação Segura">
-    </map>
-  </section>
-
-  <section id="preco"
-    style="background: #fff8ec; padding: 3rem 2rem; text-align: center; font-family: Arial, sans-serif;">
-    <div style="animation: fadeInUp 1s ease-out;">
-      <span style="font-size: 3rem; font-weight: bold; color: #e74c3c;">R$39,90<sup
-          style="font-size: 1.5rem; padding: 0.5rem; color: rgb(21, 255, 0);"><del>R$57,99</del></sup></span>
-    </div>
-
-    <div>
-      <p>Não perca a chance de lucrar com pães, compre agora mesmo.</p>
-      <a href="https://pay.hotmart.com/E99814071Y" class="ebook-btn" id="checkout">Lucrar com pães agora mesmo!</a>
-    </div>
-
-    <style>
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    </style>
-  </section>
-
-
-
-  <!-- Botões Flutuantes de CTA -->
-  <!-- FAQ Flutuante - Estilo Pantonny -->
-  <style>
-    :root {
-      --roxo: #ff6600;
-      --claro: #f9f4fc;
-      --texto: #333;
-      --branco: #ffffff;
-      --verde: #25D366;
-    }
-
-    #faq-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--roxo);
-      color: var(--branco);
-      border: none;
-      border-radius: 30px;
-      padding: 14px 20px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 15px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      z-index: 9999;
-      transition: all 0.3s ease;
-    }
-
-    #faq-button:hover {
-      transform: scale(1.05);
-      background: #e65c00;
-    }
-
-    #faq-box {
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      width: 320px;
-      max-height: 80vh;
-      overflow-y: auto;
-      background: var(--branco);
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      padding: 20px;
-      font-family: 'Poppins', sans-serif;
-      display: none;
-      z-index: 9998;
-      animation: slideUp 0.4s ease forwards;
-    }
-
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .faq-item {
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
-      margin-bottom: 10px;
-    }
-
-    .faq-question {
-      font-weight: 600;
-      color: var(--roxo);
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .faq-question:hover {
-      color: #d95700;
-    }
-
-    .faq-answer {
-      display: none;
-      font-size: 14px;
-      color: var(--texto);
-      margin-top: 5px;
-      line-height: 1.5;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    a.whatsapp-btn {
-      display: inline-block;
-      background: var(--verde);
-      color: var(--branco);
-      padding: 10px 15px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 10px;
-      transition: all 0.3s ease;
-    }
-
-    a.whatsapp-btn:hover {
-      background: #1ebe5d;
-    }
-
-    @media screen and (max-width: 480px) {
-      #faq-box {
-        width: 90%;
-        right: 5%;
-        bottom: 90px;
-      }
-
-      #faq-button {
-        font-size: 14px;
-        padding: 12px 16px;
-      }
-    }
-  </style>
-
-  <!-- Botão Flutuante -->
-  <button id="faq-button">Dúvidas Frequentes</button>
-
-  <!-- Caixa de FAQ -->
-  <div id="faq-box">
-    <div class="faq-item">
-      <div class="faq-question">📘 O que tem no eBook?</div>
-      <div class="faq-answer">O eBook contém receitas práticas e dicas para você aprender a fazer e vender pães
-        caseiros.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">👶 É indicado para iniciantes?</div>
-      <div class="faq-answer">Sim! Todo o conteúdo foi pensado para quem nunca trabalhou com panificação antes.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">📩 Como vou receber o eBook?</div>
-      <div class="faq-answer">Assim que o pagamento for confirmado, você receberá o link de download direto no seu
-        e-mail e WhatsApp.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">💸 Posso começar a vender com esse conteúdo?</div>
-      <div class="faq-answer">Com certeza! O material inclui orientações práticas para começar a vender ainda essa
-        semana.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">⏳ O conteúdo tem validade?</div>
-      <div class="faq-answer">Não! Você poderá acessar o eBook sempre que quiser, sem prazo de expiração.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">💬 Ainda com dúvidas?</div>
-      <div class="faq-answer">
-        Fale diretamente com nosso time pelo WhatsApp e tire todas as suas dúvidas agora mesmo.<br><br>
-        <a href="https://wa.me/5511968559541?text=Olá!%20Gostaria%20de%20tirar%20algumas%20dúvidas%20sobre%20o%20eBook."
-          class="whatsapp-btn" target="_blank">
-          👉 Falar via WhatsApp
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Script de interatividade -->
-  <script>
-    const faqButton = document.getElementById('faq-button');
-    const faqBox = document.getElementById('faq-box');
-    const questions = document.querySelectorAll('.faq-question');
-
-    faqButton.addEventListener('click', () => {
-      faqBox.style.display = faqBox.style.display === 'block' ? 'none' : 'block';
-    });
-
-    questions.forEach(question => {
-      question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        if (answer.style.display === 'block') {
-          answer.style.display = 'none';
-        } else {
-          document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-          answer.style.display = 'block';
-        }
-      });
-    });
-  </script>
-
-
-  <!-- JavaScript da FAQ -->
-  <script>
-    const faqBtn = document.getElementById('faq-button');
-    const faqBox = document.getElementById('faq-box');
-    const questions = document.querySelectorAll('.faq-question');
-
-    faqBtn.addEventListener('click', () => {
-      faqBox.style.display = faqBox.style.display === 'block' ? 'none' : 'block';
-    });
-
-    questions.forEach((question) => {
-      question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-      });
-    });
-  </script>
-
-
-  <!-- Footer (Rodapé) -->
-  <footer style="background-color: #ff7700; color: #fff; padding: 80px 0;">
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
-      <div style="flex: 1; min-width: 200px; margin: 10px;">
-        <h4 style="margin-bottom: 15px;">Pantonny</h4>
-        <p>Transformando sua paixão por pães em um negócio lucrativo.</p>
-      </div>
-      <div style="flex: 1; min-width: 200px; margin: 10px;">
-        <h4 style="margin-bottom: 15px;">Links Úteis</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li><a href="#beneficios" style="color: #fff; text-decoration: none;">Benefícios</a></li>
-          <li><a href="#depoimentos" style="color: #fff; text-decoration: none;">Depoimentos</a></li>
-        </ul>
-      </div>
-      <div style="flex: 1; min-width: 200px; margin: 10px;">
-        <h4 style="margin-bottom: 15px;">Contato</h4>
-        <a style="color: #fff; text-decoration: none;" href="mailto:pantonnypaes@gmail.com">contato@pantonny.com.br</a>
-        <a style="text-decoration: none; color: white; text-transform: uppercase; font-weight: bold;"
-          href="https://wa.me/5511968559541?text=Olá!%20Gostaria%20de%20tirar%20algumas%20dúvidas%20sobre%20o%20eBook.">
-          <p>Entrar em contato via WhatsApp</p>
-        </a>
-      </div>
-    </div>
-    <div style="text-align: center; margin-top: 30px; font-size: 14px;">
-      © 2025 Pantonny | Todos os direitos reservados
-    </div>
-  </footer>
-
-  <!-- Outras seções como Depoimentos, Compra, etc. -->
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('show');
-      menu.classList.remove('hide');
-    }
-
-    function closeMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.add('hide');
-      setTimeout(() => menu.classList.remove('show'), 300);
-    }
-
-  </script>
-
-  <script>
-  function startCountdown(durationHours) {
-    const countdownElement = document.getElementById("countdown");
-    const hoursSpan = document.getElementById("hours");
-    const minutesSpan = document.getElementById("minutes");
-    const secondsSpan = document.getElementById("seconds");
-
-    const savedEndTime = localStorage.getItem("bonusCountdownEnd");
-    let endTime;
-
-    if (savedEndTime) {
-      endTime = new Date(savedEndTime);
-    } else {
-      endTime = new Date();
-      endTime.setHours(endTime.getHours() + durationHours);
-      localStorage.setItem("bonusCountdownEnd", endTime);
-    }
-
-    function updateCountdown() {
-      const now = new Date();
-      const distance = endTime - now;
-
-      if (distance <= 0) {
-        hoursSpan.textContent = "00";
-        minutesSpan.textContent = "00";
-        secondsSpan.textContent = "00";
-        return;
-      }
-
-      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((distance / (1000 * 60)) % 60);
-      const seconds = Math.floor((distance / 1000) % 60);
-
-      hoursSpan.textContent = String(hours).padStart(2, "0");
-      minutesSpan.textContent = String(minutes).padStart(2, "0");
-      secondsSpan.textContent = String(seconds).padStart(2, "0");
-
-      requestAnimationFrame(updateCountdown);
-    }
-
-    updateCountdown();
-  }
-
-  // Iniciar o contador com 12 horas
-  window.addEventListener("DOMContentLoaded", () => {
-    startCountdown(12);
-  });
-</script>
-
-
+    </header>
+
+    <main>
+        <section class="plans">
+            <h2>Planos de Assinatura</h2>
+            <div class="plan-cards">
+                <!-- Plano 8 Pães -->
+                <div class="plan-card">
+                    <div class="discount-badge">5% OFF</div>
+                    <img src="assets/image/project-image/pão-tradicional.jpg" alt="Plano 8 Pães">
+                    <h3>Plano 8 Pães</h3>
+                    <p class="description">Ideal para quem ama pão fresquinho semanalmente.</p>
+                    <p class="price">
+                        <span class="old-price">R$ 80,00</span> 
+                        <span class="new-price">R$ 76,00</span>
+                    </p>
+                    <button class="subscribe-btn" onclick="subscribe('8 Pães (R$ 76,00)')">Assinar Agora</button>
+                </div>
+                <!-- Plano 12 Pães -->
+                <div class="plan-card">
+                    <div class="discount-badge">10% OFF</div>
+                    <img src="assets/image/project-image/pão-tradicional.jpg" alt="Plano 12 Pães">
+                    <h3>Plano 12 Pães</h3>
+                    <p class="description">Mais economia para quem não abre mão do pãozinho.</p>
+                    <p class="price">
+                        <span class="old-price">R$ 120,00</span> 
+                        <span class="new-price">R$ 108,00</span>
+                    </p>
+                    <button class="subscribe-btn" onclick="subscribe('12 Pães (R$ 108,00)')">Assinar Agora</button>
+                </div>
+                <!-- Plano 16 Pães -->
+                <div class="plan-card">
+                    <div class="discount-badge">15% OFF</div>
+                    <img src="assets/image/project-image/pão-tradicional.jpg" alt="Plano 16 Pães">
+                    <h3>Plano 16 Pães</h3>
+                    <p class="description">Perfeito para famílias ou compartilhar com amigos.</p>
+                    <p class="price">
+                        <span class="old-price">R$ 160,00</span> 
+                        <span class="new-price">R$ 136,00</span>
+                    </p>
+                    <button class="subscribe-btn" onclick="subscribe('16 Pães (R$ 136,00)')">Assinar Agora</button>
+                </div>
+                <!-- Plano 20 Pães -->
+                <div class="plan-card">
+                    <div class="discount-badge">20% OFF</div>
+                    <img src="assets/image/project-image/pão-tradicional.jpg" alt="Plano 20 Pães">
+                    <h3>Plano 20 Pães</h3>
+                    <p class="description">Máxima economia para quem ama pão fresquinho sempre.</p>
+                    <p class="price">
+                        <span class="old-price">R$ 200,00</span> 
+                        <span class="new-price">R$ 160,00</span>
+                    </p>
+                    <button class="subscribe-btn" onclick="subscribe('20 Pães (R$ 160,00)')">Assinar Agora</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Assinatura Personalizada</h2>
+            <form id="subscriptionForm">
+                <label for="name">Nome completo:</label>
+                <input type="text" id="name" name="name" required placeholder="Digite seu nome completo">
+
+                <label for="deliveryDay">Dia de entrega preferido:</label>
+                <select id="deliveryDay" name="deliveryDay" required>
+                    <option value="">Selecione...</option>
+                    <option value="Terça-feira">Terça-feira</option>
+                    <option value="Quinta-feira">Quinta-feira</option>
+                    <option value="Domingo">Domingo</option>
+                </select>
+
+                <label for="plan">Plano escolhido:</label>
+                <select id="plan" name="plan" required>
+                    <option value="">Selecione...</option>
+                    <option value="8 Pães (R$ 76,00)">8 Pães (R$ 76,00)</option>
+                    <option value="12 Pães (R$ 108,00)">12 Pães (R$ 108,00)</option>
+                    <option value="16 Pães (R$ 136,00)">16 Pães (R$ 136,00)</option>
+                    <option value="20 Pães (R$ 160,00)">20 Pães (R$ 160,00)</option>
+                </select>
+
+                <label for="paymentDay">Dia do mês para pagamento (dias úteis):</label>
+                <input type="number" id="paymentDay" name="paymentDay" min="1" max="31" required placeholder="Ex: 5">
+
+                <label for="reminder">Deseja ser lembrado do pagamento dias antes?</label>
+                <select id="reminder" name="reminder" required>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+
+                <button type="submit">Enviar Pedido via WhatsApp</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pantonny. Todos os direitos reservados.</p>
+
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
