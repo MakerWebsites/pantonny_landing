@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,11 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="header-content">
             <h1>PANTONNY</h1>
-            <p>Entregas nos dias de culto: <strong>terça, quinta e domingo</strong></p>
-            <p>A cada pão vendido R$ 2,00 serão covertidos para a oferta na igreja.</p>
         </div>
     </header>
 
@@ -25,53 +25,167 @@
                     <div class="discount-badge">5% OFF</div>
                     <img src="assets/image/project-image/pão-tradicional.jpg" alt="Plano 8 Pães">
                     <h3>Plano 8 Pães</h3>
+                    <p style="text-align: center;">8 Pães por mês / 2 pães por semana</p>
                     <p class="description">Ideal para quem ama pão fresquinho semanalmente.</p>
                     <p class="price">
-                        <span class="old-price">R$ 80,00</span> 
+                        <span class="old-price">R$ 80,00</span>
                         <span class="new-price">R$ 76,00</span>
                     </p>
-                    <button class="subscribe-btn" onclick="subscribe('8 Pães (R$ 76,00)')">Assinar Agora</button>
+                    <button class="subscribe-btn"
+                        onclick="subscribe('Plano Assinatura 8 Pães por mês / 2 pães por semana (R$ 76,00)')">Assinar Agora</button>
+                    <p style="text-align: center;">imagem ilustrativa</p>
                 </div>
                 <!-- Plano 12 Pães -->
                 <div class="plan-card">
                     <div class="discount-badge">10% OFF</div>
                     <img src="assets/image/project-image/pão-tradicional.jpg" alt="Plano 12 Pães">
                     <h3>Plano 12 Pães</h3>
+                    <p style="text-align: center;">12 Pães por mês / 3 pães por semana</p>
                     <p class="description">Mais economia para quem não abre mão do pãozinho.</p>
                     <p class="price">
-                        <span class="old-price">R$ 120,00</span> 
+                        <span class="old-price">R$ 120,00</span>
                         <span class="new-price">R$ 108,00</span>
                     </p>
-                    <button class="subscribe-btn" onclick="subscribe('12 Pães (R$ 108,00)')">Assinar Agora</button>
+                    <button class="subscribe-btn"
+                        onclick="subscribe('Plano Assinatura 12 Pães por mês / 3 pães por semana (R$ 108,00)')">Assinar Agora</button>
+                    <p style="text-align: center;">imagem ilustrativa</p>
                 </div>
                 <!-- Plano 16 Pães -->
                 <div class="plan-card">
                     <div class="discount-badge">15% OFF</div>
                     <img src="assets/image/project-image/pão-tradicional.jpg" alt="Plano 16 Pães">
                     <h3>Plano 16 Pães</h3>
+                    <p style="text-align: center;">16 Pães por mês / 4 pães por semana</p>
                     <p class="description">Perfeito para famílias ou compartilhar com amigos.</p>
                     <p class="price">
-                        <span class="old-price">R$ 160,00</span> 
+                        <span class="old-price">R$ 160,00</span>
                         <span class="new-price">R$ 136,00</span>
                     </p>
-                    <button class="subscribe-btn" onclick="subscribe('16 Pães (R$ 136,00)')">Assinar Agora</button>
-                </div>
-                <!-- Plano 20 Pães -->
-                <div class="plan-card">
-                    <div class="discount-badge">20% OFF</div>
-                    <img src="assets/image/project-image/pão-tradicional.jpg" alt="Plano 20 Pães">
-                    <h3>Plano 20 Pães</h3>
-                    <p class="description">Máxima economia para quem ama pão fresquinho sempre.</p>
-                    <p class="price">
-                        <span class="old-price">R$ 200,00</span> 
-                        <span class="new-price">R$ 160,00</span>
-                    </p>
-                    <button class="subscribe-btn" onclick="subscribe('20 Pães (R$ 160,00)')">Assinar Agora</button>
+                    <button class="subscribe-btn"
+                        onclick="subscribe('Plano Assinatura 16 Pães por mês / 4 pães por semana (R$ 136,00)')">Assinar Agora</button>
+                    <p style="text-align: center;">imagem ilustrativa</p>
                 </div>
             </div>
         </section>
 
-        <section class="form-section">
+        <section class="plans">
+            <h2>Pães sobre encomenda</h2>
+            <div class="plan-cards">
+                <!-- Plano 8 Pães -->
+                <div class="plan-card">
+                    <div class="discount-badge">Grãos Selecionados</div>
+                    <img src="assets/image/project-image/pão-de-graos.jpg" alt="Plano 8 Pães">
+                    <h3>Pães De Grãos</h3>
+                    <p style="text-align: center;">8 Pães por mês / 2 pães por semana</p>
+                    <p class="description">Ideal para quem ama pão fresquinho semanalmente.</p>
+                    <p class="price">
+                        <span class="old-price">R$ 80,00</span>
+                        <span class="new-price">R$ 76,00</span>
+                    </p>
+                    <button class="subscribe-btn"
+                        onclick="subscribe('8 Pães por mês / 2 pães por semana (R$ 76,00)')">Encomendar Agora</button>
+                    <p style="text-align: center;">imagem ilustrativa</p>
+                </div>
+                <!-- Plano 12 Pães -->
+                <div class="plan-card">
+                    <div class="discount-badge">Grãos Selecionados</div>
+                    <img src="assets/image/project-image/pão-de-graos.jpg" alt="Plano 12 Pães">
+                    <h3>Pães De Grãos</h3>
+                    <p style="text-align: center;">12 Pães por mês / 3 pães por semana</p>
+                    <p class="description">Mais economia para quem não abre mão do pãozinho.</p>
+                    <p class="price">
+                        <span class="old-price">R$ 120,00</span>
+                        <span class="new-price">R$ 108,00</span>
+                    </p>
+                    <button class="subscribe-btn"
+                        onclick="subscribe('12 Pães por mês / 3 pães por semana (R$ 108,00)')">Encomendar Agora</button>
+                    <p style="text-align: center;">imagem ilustrativa</p>
+                </div>
+                <!-- Plano 16 Pães -->
+                <div class="plan-card">
+                    <div class="discount-badge">Grãos Selecionados</div>
+                    <img src="assets/image/project-image/pão-de-graos.jpg" alt="Plano 16 Pães">
+                    <h3>Pães De Grãos</h3>
+                    <p style="text-align: center;">16 Pães por mês / 4 pães por semana</p>
+                    <p class="description">Perfeito para famílias ou compartilhar com amigos.</p>
+                    <p class="price">
+                        <span class="old-price">R$ 160,00</span>
+                        <span class="new-price">R$ 136,00</span>
+                    </p>
+                    <button class="subscribe-btn"
+                        onclick="subscribe('16 Pães por mês / 4 pães por semana (R$ 136,00)')">Encomendar Agora</button>
+                    <p style="text-align: center;">imagem ilustrativa</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="plans">
+            <h2>Bolos por encomenda</h2>
+            <div class="plan-cards">
+                <!-- Bolo -->
+                <div class="plan-card">
+                    <div class="discount-badge">Massa Premium</div>
+                    <img src="assets/image/project-image/bolo-de-chocolate-simples1200480.jpg" alt="Plano 8 Pães">
+                    <h3>Bolo Chocolate ~ 500g</h3>
+                    <p class="description">Massa macia e úmida. Sabor intenso e irresistível para qualquer ocasião especial!</p>
+                    <p class="price">
+                        <span class="old-price">R$ 30,00</span>
+                        <span class="new-price">R$ 15,00</span>
+                    </p>
+                    <button class="subscribe-btn"
+                        onclick="subscribe('Bolo Chocolate Massa Premium (R$ 15,00)')">Encomendar Agora</button>
+                    <p style="text-align: center;">imagem ilustrativa</p>
+                </div>
+                <!-- Bolo -->
+                <div class="plan-card">
+                    <div class="discount-badge">Massa Premium</div>
+                    <img src="assets/image/project-image/bolo-de-chocolate-simples1200480.jpg" alt="Plano 12 Pães">
+                    <h3>Bolo Chocolate ~ 500g</h3>
+                    <p class="description">Massa macia e úmida. Sabor intenso e irresistível para qualquer ocasião especial!</p>
+                    <p class="price">
+                        <span class="old-price">R$ 30,00</span>
+                        <span class="new-price">R$ 15,00</span>
+                    </p>
+                    <button class="subscribe-btn"
+                        onclick="subscribe('Bolo Chocolate Massa Premium (R$ 15,00)')">Encomendar Agora</button>
+                    <p style="text-align: center;">imagem ilustrativa</p>
+                </div>
+                <!-- Bolo -->
+                <div class="plan-card">
+                    <div class="discount-badge">Massa Premium</div>
+                    <img src="assets/image/project-image/bolo-de-chocolate-simples1200480.jpg" alt="Plano 16 Pães">
+                    <h3>Bolo Chocolate ~ 500g</h3>
+                    <p class="description">Massa macia e úmida. Sabor intenso e irresistível para qualquer ocasião especial!</p>
+                    <p class="price">
+                        <span class="old-price">R$ 30,00</span>
+                        <span class="new-price">R$ 15,00</span>
+                    </p>
+                    <button class="subscribe-btn"
+                        onclick="subscribe('Bolo Chocolate Massa Premium (R$ 15,00)')">Encomendar Agora</button>
+                    <p style="text-align: center;">imagem ilustrativa</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-complemento">
+  <div class="container-complemento">
+    <div class="imagem-complemento">
+      <span class="selo-ia">Imagem gerada por IA</span>
+      <img src="assets/image/project-image/colaborador-pantonny.png" alt="Descrição da imagem" />
+    </div>
+    <div class="texto-complemento">
+      <h2>Pantonny – Simplesmente essencial.</h2>
+      <p>
+        Este é um texto complementar que pode descrever serviços, valores ou
+        qualquer informação importante. Ele está posicionado ao lado da imagem
+        e se adapta perfeitamente a todas as telas.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+        <!-- <section class="form-section">
             <h2>Assinatura Personalizada</h2>
             <form id="subscriptionForm">
                 <label for="name">Nome completo:</label>
@@ -103,16 +217,17 @@
                     <option value="Não">Não</option>
                 </select>
 
-                <button type="submit">Enviar Pedido via WhatsApp</button>
+                <button type="submit">Enviar Pedido</button>
             </form>
-        </section>
+        </section> -->
     </main>
 
     <footer>
-        <p>&copy; 2025 Pantonny. Todos os direitos reservados.</p>
+        <p>&copy; 2022 - 2025 Pantonny. Todos os direitos reservados.</p>
 
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>

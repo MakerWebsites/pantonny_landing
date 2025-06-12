@@ -1,6 +1,6 @@
 function subscribe(plan) {
-    const message = `*Novo Pedido de Assinatura de Pães*\n\n` +
-                    `*Plano Escolhido:* ${plan}\n\n` +
+    const message = `*Novo Pedido:*\n\n` +
+                    `*Item:* ${plan}\n\n` +
                     `Por favor, envie seu nome e dia de entrega preferido.`;
 
     const whatsappNumber = '+5511937457836';

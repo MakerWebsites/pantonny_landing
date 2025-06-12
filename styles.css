@@ -10,13 +10,19 @@ body {
 header {
     background: #000;
     color: #fff;
-    padding: 1.5em 1em;
+    padding: 1em 1em;
     text-align: center;
 }
 
 header h1 {
+    letter-spacing: 4px;
     margin: 0;
     font-size: 2rem;
+}
+
+header p {
+    margin: 0;
+    color: #fdf6e3;
 }
 
 main {
@@ -172,4 +178,84 @@ footer {
     .plan-card img {
         height: 180px;
     }
+}
+
+
+.section-complemento {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+}
+
+.container-complemento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.imagem-complemento {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.imagem-complemento img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.selo-ia {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* leve fundo branco translúcido */
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.texto-complemento {
+  flex: 1;
+  min-width: 280px;
+}
+
+.texto-complemento h2 {
+    text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.texto-complemento p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .container-complemento {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagem-complemento {
+    max-width: 100%;
+  }
+
+  .texto-complemento h2 {
+    font-size: 1.5rem;
+  }
+
+  .texto-complemento p {
+    font-size: 0.95rem;
+  }
 }
